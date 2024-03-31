@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e3d0b3;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RegisterController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/Chees chase logo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="370.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="tooShort" layoutX="205.0" layoutY="205.0" prefHeight="18.0" prefWidth="115.0" text="At least 8 characters." textFill="RED" visible="false" />
+            <ImageView fitHeight="112.0" fitWidth="112.0" layoutX="129.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/Lock.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="93.0" layoutY="171.0" text="Username" textFill="#1d1921">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="222.0" text="Create password" textFill="#1d1921">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="205.0" layoutY="174.0" promptText="Username" />
+            <TextField fx:id="createPassword" layoutX="205.0" layoutY="225.0" promptText="Create password" />
+            <Button fx:id="processRegister" layoutX="208.0" layoutY="341.0" mnemonicParsing="false" onAction="#register" prefHeight="30.0" prefWidth="143.0" style="-fx-background-color: #e5bc71;" text="Process register" textFill="#17191f">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="wrongLogIn" layoutX="164.0" layoutY="160.0" prefHeight="18.0" prefWidth="176.0" text="Incorrect username or password." textFill="RED" visible="false" />
+            <Label layoutX="14.0" layoutY="275.0" text="Confirm password" textFill="#1d1921">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="confirmPassword" layoutX="205.0" layoutY="278.0" promptText="Confirm password" />
+            <Button fx:id="back" layoutX="57.0" layoutY="341.0" mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="143.0" style="-fx-background-color: #e5bc71;" text="Back" textFill="#17191f">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="userExists" layoutX="205.0" layoutY="154.0" text="Username already exists." textFill="RED" visible="false" />
+            <Label fx:id="notMatch" layoutX="205.0" layoutY="258.0" text="The passwords do not match." textFill="RED" visible="false" />
+            <Label fx:id="usernameLength" layoutX="205.0" layoutY="154.0" text="At least 4 characters." textFill="RED" visible="false" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
